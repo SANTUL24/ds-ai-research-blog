@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+}
+
+nav {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddddda;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 0 8%;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 850px;
+}
+
+.tag {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 76px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    display: block;
+    color: #666;
+}
+
+.description {
+    font-size: 21px;
+    line-height: 1.6;
+    max-width: 650px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.primary-btn {
+    background: #171717;
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #aaa;
+    color: #171717;
+}
+
+.about-preview {
+    padding: 80px 0;
+    border-top: 1px solid #ddddda;
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.topic h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.topic p {
+    color: #666;
+    line-height: 1.6;
+}
