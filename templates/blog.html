@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+Blog | DS × AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="about-preview">
+
+    <p class="tag">
+        BLOG
+    </p>
+
+    <h1>
+        Thoughts on Data & AI
+    </h1>
+
+    <p class="description">
+        Articles and notes about machine learning,
+        artificial intelligence, research and technology.
+    </p>
+
+</section>
+
+
+<section class="blog-grid">
+
+    {% for post in posts %}
+
+    <article class="blog-card">
+
+        <p class="post-category">
+            {{ post.category }}
+        </p>
+
+        <h2>
+            {{ post.title }}
+        </h2>
+
+        <p class="post-description">
+            {{ post.description }}
+        </p>
+
+        <a href="#" class="read-more">
+            Read article →
+        </a>
+
+    </article>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}
+Projects | DS × AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="about-preview">
+
+    <p class="tag">
+        PROJECTS
+    </p>
+
+    <h1>
+        Building with
+        <span>Data & AI.</span>
+    </h1>
+
+    <p class="description">
+        A collection of machine learning, data science and
+        artificial intelligence projects.
+    </p>
+
+</section>
+
+
+<section class="project-grid">
+
+    {% for project in projects %}
+
+    <article class="project-card">
+
+        <div>
+
+            <p class="project-category">
+                {{ project.category }}
+            </p>
+
+            <h2>
+                {{ project.title }}
+            </h2>
+
+            <p class="project-description">
+                {{ project.description }}
+            </p>
+
+        </div>
+
+        <a href="/projects/{{ project.slug }}" class="project-link">
+            View project →
+        </a>
+
+    </article>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

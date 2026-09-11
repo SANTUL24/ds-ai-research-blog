@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ project.title }} | DS × AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="project-hero">
+
+    <p class="tag">
+        {{ project.category }}
+    </p>
+
+    <h1>
+        {{ project.title }}
+    </h1>
+
+    <p class="description">
+        {{ project.description }}
+    </p>
+
+</section>
+
+
+<section class="project-content">
+
+    <!-- 01 -->
+
+    <div class="project-section">
+
+        <p class="section-number">01</p>
+
+        <h2>Problem Statement</h2>
+
+        <p>
+            {{ project.problem }}
+        </p>
+
+    </div>
+
+
+    <!-- 02 -->
+
+    <div class="project-section">
+
+        <p class="section-number">02</p>
+
+        <h2>Data</h2>
+
+        <p>
+            {{ project.data }}
+        </p>
+
+    </div>
+
+
+    <!-- 03 -->
+
+    <div class="project-section">
+
+        <p class="section-number">03</p>
+
+        <h2>Features</h2>
+
+        <div class="feature-list">
+
+            {% for feature in project.features %}
+
+            <div class="feature-item">
+                {{ feature }}
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- 04 -->
+
+    <div class="project-section">
+
+        <p class="section-number">04</p>
+
+        <h2>Target Definition</h2>
+
+        <div class="target-box">
+            {{ project.target_definition }}
+        </div>
+
+    </div>
+
+
+    <!-- 05 -->
+
+    <div class="project-section">
+
+        <p class="section-number">05</p>
+
+        <h2>Exploratory Data Analysis</h2>
+
+        <div class="eda-list">
+
+            {% for item in project.eda %}
+
+            <div class="eda-item">
+                <span>→</span>
+                {{ item }}
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- 06 -->
+
+    <div class="project-section">
+
+        <p class="section-number">06</p>
+
+        <h2>Methodology</h2>
+
+        <p>
+            {{ project.methodology }}
+        </p>
+
+    </div>
+
+
+    <!-- 07 -->
+
+    <div class="project-section">
+
+        <p class="section-number">07</p>
+
+        <h2>Model Performance</h2>
+
+        <div class="metrics-grid">
+
+            {% for metric in project.metrics %}
+
+            <div class="metric-card">
+
+                <p class="metric-name">
+                    {{ metric.name }}
+                </p>
+
+                <h3>
+                    {{ metric.value }}
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- 08 -->
+
+    <div class="project-section">
+
+        <p class="section-number">08</p>
+
+        <h2>Results</h2>
+
+        <p>
+            {{ project.result }}
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
